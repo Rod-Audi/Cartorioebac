@@ -101,7 +101,7 @@ int deletar() //função para deletar usuário
     char cpf[40];
 
     printf ("Você escolheu deletar nomes.\n\n\nDigite o CPF a ser deletado: ");
-    scanf ("%s",cpf);
+    scanf("%s",cpf);
 
 
     remove(cpf);
@@ -130,7 +130,8 @@ int main() //função principal
         printf ("Selecione a opção desejada\n\n");
         printf ("\t1 - Registrar Nomes\n");
         printf ("\t2 - Consultar Nomes\n");
-        printf ("\t3 - Deletar Nomes\n\n\n");
+        printf ("\t3 - Deletar Nomes\n");
+        printf ("\t4 - Sair do Sistema\n\n\n");
         printf ("Escolha a Opção: "); //final do menu
 
         scanf ("%d" , &opcao); //armazenamento de usuários
@@ -149,6 +150,11 @@ int main() //função principal
 
             case 3:
             deletar();
+            break;
+
+            case 4:
+            printf ("Obrigado por utilizar o sistema\n");
+            return 0;
             break;
 
             default: //qualquer opção que seja diferente das programadas
